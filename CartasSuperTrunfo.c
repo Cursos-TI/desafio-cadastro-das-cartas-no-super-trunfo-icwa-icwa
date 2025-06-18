@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main() {
 
-//variaveis para armazenar os dados da Carta 1
+
+    //variaveis para armazenar os dados da Carta 1
 
 char Estado_Carta1[50], Codigo_da_Carta1[50], Nome_da_Cidade_Carta1[50];
 int Populacao_Carta1, Numero_de_Pontos_Turisticos_Carta1;
@@ -96,20 +97,20 @@ printf("Número de Pontos Turísticos: %d\n", Numero_de_Pontos_Turisticos_Carta2
 printf("Densidade Populacional: %.2f\n", Densidade_Populacional_Carta2);
 printf("PIB per Capita: %.2f\n", PIB_per_Capita_Carta2);
 
-// Comparação entre as cartas
+// Comparação entre as cartas 0 para falso e 1 para verdadeiro
 printf("\n****Comparação entre as Cartas****\n");
 int Resultado_Populacao = Populacao_Carta1 > Populacao_Carta2;
-printf("Em População, o vencedor é a Carta %d!\n", Resultado_Populacao ? 1 : 2) ;
+printf("No quesito População, o vencedor é a Carta 1: %d\n", Resultado_Populacao) ;
 int Resultado_Area = Area_em_Km2_Carta1 > Area_em_Km2_Carta2;
-printf("Em Área, o vencedor é a Carta %d!\n", Resultado_Area ? 1 : 2 );
+printf("No quesito Área, o vencedor é a Carta 1: %d\n", Resultado_Area);
 int Resultado_PIB = PIB_Carta1 > PIB_Carta2;
-printf("Em PIB, o vencedor é a Carta %d!\n", Resultado_PIB ? 1 : 2);
+printf("No quesito PIB, o vencedor é a Carta 1: %d\n", Resultado_PIB);
 int Resultado_Pontos_Turisticos = Numero_de_Pontos_Turisticos_Carta1 > Numero_de_Pontos_Turisticos_Carta2;
-printf("Em Número de Pontos Turísticos, o vencedor é a Carta %d!\n", Resultado_Pontos_Turisticos ? 1 : 2 );
-int Resultado_Densidade = 1/Densidade_Populacional_Carta1 > 1/Densidade_Populacional_Carta2;
-printf("Em Densidade Populacional, o vencedor é a Carta %d!\n", Resultado_Densidade ? 1 : 2);
+printf("No quesito Número de Pontos Turísticos, o vencedor é a Carta 1:%d\n", Resultado_Pontos_Turisticos);
+int Resultado_Densidade = Densidade_Populacional_Carta1 < Densidade_Populacional_Carta2;
+printf("No quesito Densidade Populacional, o vencedor é a Carta 1: %d\n", Resultado_Densidade);
 int Resultado_PIB_per_Capita = PIB_per_Capita_Carta1 > PIB_per_Capita_Carta2;
-printf("Em PIB per Capita, o vencedor é a Carta %d!\n", Resultado_PIB_per_Capita ? 1 : 2);
+printf("No quesito PIB per Capita, o vencedor é a Carta 1: %d\n", Resultado_PIB_per_Capita);
 
 // Cálculo do resultado final de cada carta
 float Resultado_Carta1 = (float) Populacao_Carta1 + Area_em_Km2_Carta1 + PIB_Carta1 + Numero_de_Pontos_Turisticos_Carta1 + 1/Densidade_Populacional_Carta1 + PIB_per_Capita_Carta1;
@@ -120,10 +121,10 @@ printf("Resultado da Carta 2: %.2f\n", Resultado_Carta2);
 printf("\n****Gran Final****\n");
 
 int Resultado_Vencedor = Resultado_Carta1 > Resultado_Carta2;
-printf("O vencedor é a Carta %d!\n", Resultado_Vencedor ? 1 : 2);
+printf("O vencedor é a Carta 1: %d\n", Resultado_Vencedor);
 
 
-printf("Fim do Jogo do Trunfo!\n");
+printf("\nFim do Jogo do Trunfo!\n");
 
 return 0;
 }
